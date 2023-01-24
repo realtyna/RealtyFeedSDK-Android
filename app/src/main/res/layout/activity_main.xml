@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RealtyFeedSDK"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RealtyFeedSDK for Android apps."
+        android:fontFamily="sans-serif"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edAPIKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="16sp"
+        android:hint="YOUR REALTYFEED API KEY"
+        app:layout_constraintTop_toBottomOf="@id/subTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/selectGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8sp"
+        app:layout_constraintTop_toBottomOf="@id/edAPIKey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/listings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="getListings"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="getProperty"/>
+        </RadioGroup>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCheckData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:text="Fetch Data"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8sp"
+        android:scrollbars = "vertical"
+        app:layout_constraintTop_toBottomOf="@id/selectGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/copy_rights"
+        />
+    <TextView
+        android:id="@+id/copy_rights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Realtyna"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,7 +45,7 @@ class API: IRFServer {
             httpURLConnection.setRequestProperty("Content-Type", "application/json") // The format of the content we're sending to the server
             httpURLConnection.setRequestProperty("Accept", "application/json") // The format of response we want to get from the server
             httpURLConnection.setRequestProperty("x-api-key", RealtyFeedSDK.xApiKey)
-            httpURLConnection.setRequestProperty("X-RapidAPI-Key", "e0cfca0c1emsh097a7f39a0125a0p1ba642jsn93d74b6170c8")
+            httpURLConnection.setRequestProperty("X-RapidAPI-Key", RealtyFeedSDK.rapidApiKey)
             httpURLConnection.setRequestProperty("X-RapidAPI-Host", "mls-router1.p.rapidapi.com")
             httpURLConnection.doInput = true
 

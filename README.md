@@ -21,7 +21,7 @@ Add the RealtyFeedSDK initialization code to App.kt.
 class App : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
-        RealtyFeedSDK.initial("YOUR-API-KEY")
+        RealtyFeedSDK.initial("YOUR-API-KEY", "YOUR-RAPID-API-KEY")
     }
 }
 ```
@@ -33,9 +33,10 @@ import com.realtyna.realtyfeedsdk.API
 ```
 
 ```kotlin
-RealtyFeedSDK.initial("YOUR-API-KEY")
+RealtyFeedSDK.initial("YOUR-API-KEY", "YOUR-RAPID-API-KEY")
 ```
 YOUR-API-KEY with your RealtyFeedSDK API Key.
+YOUR-RAPID-API-KEY with your Rapid API Key.
 
 Now you can call RealtyFeedSDK APIs anywhere of your project,
 

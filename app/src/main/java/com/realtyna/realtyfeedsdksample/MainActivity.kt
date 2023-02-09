@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var rbtnProperty: AppCompatRadioButton
     lateinit var btnCheckData: AppCompatButton
     lateinit var edAPIKey: AppCompatEditText
+    lateinit var edRapidAPIKey: AppCompatEditText
     lateinit var tvResult: AppCompatTextView
     lateinit var prefHelper: PreferenceHelper
 
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         rbtnProperty = findViewById(R.id.property)
         btnCheckData = findViewById(R.id.btnCheckData)
         edAPIKey = findViewById(R.id.edAPIKey)
+        edRapidAPIKey = findViewById(R.id.edRapidAPIKey)
         tvResult = findViewById(R.id.tvResult)
 
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
@@ -46,12 +48,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         edAPIKey.setText(prefHelper.getString("X-API-KEY", ""))
+        edRapidAPIKey.setText(prefHelper.getString("RAPID-API-KEY", ""))
 
         btnCheckData.setOnClickListener {
             btnCheckData.isEnabled = false
             val startDate = Date()
-            RealtyFeedSDK.initial(edAPIKey.text.toString())
+            RealtyFeedSDK.initial(edAPIKey.text.toString(), edRapidAPIKey.text.toString())
             prefHelper.putString(edAPIKey.text.toString(), "X-API-KEY")
+            prefHelper.putString(edRapidAPIKey.text.toString(), "RAPID-API-KEY")
 
             if (rbtnListings.isChecked){
                 API.instance.getListings { result, error ->

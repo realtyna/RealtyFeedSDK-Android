@@ -37,13 +37,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edRapidAPIKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="8sp"
+        android:hint="YOUR Rapid API KEY"
+        app:layout_constraintTop_toBottomOf="@id/edAPIKey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/selectGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="8sp"
-        app:layout_constraintTop_toBottomOf="@id/edAPIKey"
+        app:layout_constraintTop_toBottomOf="@id/edRapidAPIKey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         >

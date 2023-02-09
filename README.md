@@ -5,7 +5,8 @@ This is RealtyFeedSDK for Android apps.
 # Setup
 ## Step 1. Add RealtyFeedSDK to your project
 There are two ways to add the RealtyFeedSDK into your project:
-* A) Add RealtyFeedSDK from the gradle
+* A) Add RealtyFeedSDK from the gradle [![](https://jitpack.io/v/realtyna/RealtyFeedSDK-Android.svg)](https://jitpack.io/#realtyna/RealtyFeedSDK-Android)
+
 ```kotlin
 dependencies {
         implementation 'com.github.realtyna:RealtyFeedSDK-Android:0.0.2'

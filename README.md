@@ -8,7 +8,7 @@ There are two ways to add the RealtyFeedSDK into your project:
 * A) Add RealtyFeedSDK from the gradle
 ```kotlin
 dependencies {
-        implementation 'com.github.realtyna:RealtyFeedSDK-Android:0.0.1'
+        implementation 'com.github.realtyna:RealtyFeedSDK-Android:0.0.2'
 }
 ```
 
